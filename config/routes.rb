@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   namespace :api do
     get 'customers', to: 'customers#index'
     post 'auth/registration', to: 'auth#registration'
+    post 'auth/login', to: 'auth#login'
 
   end
 end

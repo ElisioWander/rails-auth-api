@@ -9,6 +9,15 @@ module Api
       end
     end
 
+    def login
+      user = User.find_by(email: user_params[:email])
+      if user&.valid_password?(user_params[:password])
+        render json: UserSerializer.new(user), status: :ok
+      else
+        render json: { error: 'Invalid email or password!' }, status: :unauthorized
+      end
+    end
+
     private
 
     def user_params

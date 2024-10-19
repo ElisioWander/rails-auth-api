@@ -16,7 +16,9 @@ gem "puma", ">= 5.0"
 
 # Devise
 gem 'devise'
-gem 'devise-jwt'
+gem 'jwt'
+gem 'dotenv-rails'
+# gem 'devise-jwt'
 
 #Serialize
 gem 'jsonapi-serializer'
